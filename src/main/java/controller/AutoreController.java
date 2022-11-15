@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import entita.autore;
+import entita.Autore;
 import service.AutoreService;
 
 @RestController
@@ -18,7 +18,7 @@ public class AutoreController {
 	private AutoreService autoreService;
 
 	@GetMapping("/autore/{id}")
-	public autore getAutore(@PathVariable Long id) {
+	public Autore getAutore(@PathVariable Long id) {
 		return autoreService.findAutore(id);
 	}
 	
@@ -28,13 +28,13 @@ public class AutoreController {
 	}
 	
 	@PostMapping("/autore")
-	public autore postAutore(@RequestBody autore a) {
+	public Autore postAutore(@RequestBody Autore a) {
 		autoreService.saveAutore(a);
 		return a;
 	}
 	
 	@PutMapping("/autore")
-	public autore putAutore(@RequestBody autore a) {
+	public Autore putAutore(@RequestBody Autore a) {
 		return autoreService.editAutore(a);
 	}
 }
