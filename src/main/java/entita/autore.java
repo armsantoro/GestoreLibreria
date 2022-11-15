@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -24,7 +25,7 @@ public class autore {
   @Column
   private Date annoMorte;
   @Column
-  @OneToMany(mappedBy="autore")
+  @ManyToMany(mappedBy="autore")
   private List<libro> libri;
 public autore(Long id, String nome, Date annoNascita, Date annoMorte, List<libro> libri) {
 	super();
