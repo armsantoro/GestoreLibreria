@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class autore {
+public class Autore {
   @Id
   @GeneratedValue(strategy= GenerationType.IDENTITY)
   private Long id;
@@ -25,8 +25,8 @@ public class autore {
   private Date annoMorte;
   @Column
   @ManyToMany(mappedBy="autore")
-  private List<libro> libri;
-public autore(Long id, String nome, Date annoNascita, Date annoMorte, List<libro> libri) {
+  private List<Libro> libri;
+public Autore(Long id, String nome, Date annoNascita, Date annoMorte, List<Libro> libri) {
 	super();
 	this.id = id;
 	this.nome = nome;
@@ -58,10 +58,10 @@ public Date getAnnoMorte() {
 public void setAnnoMorte(Date annoMorte) {
 	this.annoMorte = annoMorte;
 }
-public List<libro> getLibri() {
+public List<Libro> getLibri() {
 	return libri;
 }
-public void setLibri(List<libro> libri) {
+public void setLibri(List<Libro> libri) {
 	this.libri = libri;
 }
 }

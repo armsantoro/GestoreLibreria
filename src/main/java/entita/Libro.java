@@ -15,7 +15,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table
-public class libro {
+public class Libro {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class libro {
 	@Column
 	@ManyToMany
 	@JoinColumn(name = "autore_Id")
-	private List<autore> autori;
+	private List<Autore> autori;
 	@Column
 	private String ISBN;
 	@Column
@@ -49,11 +49,11 @@ public class libro {
 		this.titolo = titolo;
 	}
 
-	public List<autore> getAutori() {
+	public List<Autore> getAutori() {
 		return autori;
 	}
 
-	public void setAutori(List<autore> autori) {
+	public void setAutori(List<Autore> autori) {
 		this.autori = autori;
 	}
 
@@ -81,7 +81,7 @@ public class libro {
 		this.editore = editore;
 	}
 
-	public libro(Long id, String titolo, List<autore> autori, String iSBN, Date annoPubblicazione, String editore) {
+	public Libro(Long id, String titolo, List<Autore> autori, String iSBN, Date annoPubblicazione, String editore) {
 		super();
 		Id = id;
 		this.titolo = titolo;
