@@ -32,7 +32,7 @@ public class AutoreService {
 		if (!autoreRepo.existsById(a.getId())) {
 			throw new RuntimeException("L'Autore inserito non esiste!");
 		}
-		// Autore au=autoreRepo.getReferenceById(a.getId());
+//		Autore au =autoreRepo.getReferenceById(a.getId());
 		Autore au = a;
 		au.setNome(a.getNome());
 		au.setAnnoMorte(a.getAnnoMorte());
