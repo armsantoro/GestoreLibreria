@@ -35,6 +35,7 @@ public class AutoreController {
 	
 	@PutMapping("/autore")
 	public Autore putAutore(@RequestBody Autore a) {
+		
 		return autoreService.editAutore(a);
 	}
 }
