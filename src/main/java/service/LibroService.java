@@ -38,8 +38,8 @@ public class LibroService {
 		lib.setAnnoPubblicazione(libro.getAnnoPubblicazione());
 		lib.setEditore(libro.getEditore());
 
-		libroRepo.save(lib);
-		return libro;
+		return libroRepo.save(lib);
+		//return libro; DA TESTARE
 	}
 
 	public List<Libro> findAll() {
