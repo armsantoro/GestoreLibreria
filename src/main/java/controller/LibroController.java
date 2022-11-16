@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,4 +45,10 @@ public class LibroController {
     public List<Libro> lista2(Autore Autore){
     	return libroService.findAllautore(Autore);
     }
-}
+    @GetMapping("/tuttilibrianno")
+    public List<Libro> lista3(Date date)	{
+    	return libroService.find1(date);
+    }
+    }
+
+

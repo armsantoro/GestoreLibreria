@@ -1,5 +1,6 @@
 package repository;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,7 +12,5 @@ import entita.Libro;
 @Repository
 public interface LibroRepository extends JpaRepository<Libro, Long> {
 
-	List<Libro> findbyAutore(Autore autore);
-	
 
 }
