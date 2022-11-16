@@ -42,6 +42,6 @@ public class LibroController {
     }
     @GetMapping("/tuttilibriautore")
     public List<Libro> lista2(Autore Autore){
-    	return libroService.findAllAutore(Autore);
+    	return libroService.findAllautore(Autore);
     }
 }

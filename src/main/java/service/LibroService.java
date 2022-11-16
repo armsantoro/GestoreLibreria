@@ -43,12 +43,12 @@ public class LibroService {
 	}
 
 	public List<Libro> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return libroRepo.findAll();
 	}
 
 	public List<Libro> findAllautore(Autore autore) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return libroRepo.findbyAutore(autore);
 	}
 }
